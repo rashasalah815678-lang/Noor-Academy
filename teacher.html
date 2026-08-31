@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>لوحة المعلمة</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="teacher-panel">
+
+<h1>👩‍🏫 لوحة تحكم المعلمة</h1>
+
+<input
+type="text"
+id="courseTitle"
+placeholder="اسم الدورة">
+
+<input
+type="text"
+id="lessonTitle"
+placeholder="اسم الدرس">
+
+<input
+type="text"
+id="videoName"
+placeholder="اسم الفيديو مثل lesson1.mp4">
+
+<textarea
+id="lessonDescription"
+placeholder="اكتبي شرح الدرس"></textarea>
+
+<button onclick="saveCourse()">
+
+💾 حفظ الدورة
+
+</button>
+
+</div>
+
+<script src="teacher.js"></script>
+
+</body>
+
+</html>

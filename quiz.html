@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>اختبار مسابقة معلم وطالب - Dr Ahmed Said</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="quiz-box">
+
+<h1>📝 اختبار مسابقة معلم وطالب</h1>
+
+<p>أجيبي عن الأسئلة التالية ثم اضغطي على «إرسال الإجابات».</p>
+
+
+<!-- السؤال الأول -->
+
+<div class="question">
+
+<h3>1- ما اسم هذه الدورة؟</h3>
+
+<label>
+<input type="radio" name="q1" value="1">
+مسابقة معلم وطالب
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q1" value="0">
+القاعدة النورانية
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q1" value="0">
+التجويد
+</label>
+
+</div>
+
+
+<!-- السؤال الثاني -->
+
+<div class="question">
+
+<h3>2- ماذا تهدف الدورة إلى تقديمه؟</h3>
+
+<label>
+<input type="radio" name="q2" value="1">
+التعلم والتطبيق بطريقة منظمة
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q2" value="0">
+الألعاب فقط
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q2" value="0">
+مشاهدة الأفلام
+</label>
+
+</div>
+
+
+<!-- السؤال الثالث -->
+
+<div class="question">
+
+<h3>3- ماذا يفعل الطالب بعد دراسة الدرس؟</h3>
+
+<label>
+<input type="radio" name="q3" value="1">
+يبدأ الاختبار
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q3" value="0">
+يغلق المنصة
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q3" value="0">
+يعيد تسجيل الدخول
+</label>
+
+</div>
+
+
+<br>
+
+<button onclick="checkQuiz()">
+إرسال الإجابات
+</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+
+<script>
+
+function checkQuiz() {
+
+let score = 0;
+
+let questions = ["q1", "q2", "q3"];
+
+for (let i = 0; i < questions.length; i++) {
+
+let answer = document.querySelector(
+'input[name="' + questions[i] + '"]:checked'
+);
+
+if (!answer) {
+
+alert("من فضلك أجيبي عن جميع الأسئلة أولاً.");
+
+return;
+
+}
+
+score += Number(answer.value);
+
+}
+
+
+let result = document.getElementById("result");
+
+if (score >= 2) {
+
+result.innerHTML =
+"✅ ممتاز! نتيجتك: " + score + " من 3";
+
+setTimeout(function() {
+
+window.location.href = "certificate.html";
+
+}, 2000);
+
+}
+
+else {
+
+result.innerHTML =
+"❌ نتيجتك: " + score + " من 3. حاولي مرة أخرى.";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>شهادة إتمام الدورة - Dr Ahmed Said</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="certificate">
+
+<h1>🏆 شهادة إتمام الدورة</h1>
+
+<p>تشهد منصة</p>
+
+<h2>Dr Ahmed Said</h2>
+
+<p>بأن</p>
+
+
+<input
+type="text"
+id="studentName"
+placeholder="اكتب اسم الطالب هنا"
+>
+
+
+<p>
+
+قد أتم بنجاح دورة
+
+</p>
+
+<h2>مسابقة معلم وطالب</h2>
+
+<p>
+
+مع تمنياتنا له بدوام التوفيق والنجاح.
+
+</p>
+
+
+<button onclick="prepareCertificate()">
+🖨️ طباعة الشهادة
+</button>
+
+</div>
+
+
+<script>
+
+function prepareCertificate() {
+
+let name = document.getElementById("studentName");
+
+if (!name.value.trim()) {
+
+alert("من فضلك اكتب اسم الطالب أولاً.");
+
+return;
+
+}
+
+window.print();
+
+}
+
+</script>
+
+</body>
+
+</html>
